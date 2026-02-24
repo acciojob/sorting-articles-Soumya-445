@@ -18,10 +18,9 @@ function stripArticle(name) {
   return name.replace(/^(a|an|the)\s+/i, '');
 }
 
-// DO NOT mutate original array
 const sortedBands = [...bands].sort((a, b) =>
   stripArticle(a).localeCompare(stripArticle(b))
 );
 
 document.getElementById('band').innerHTML =
-  sortedBands.map(band => `<li>${band}</li>`).join('');
+  sortedBands.map(b => `<li>${b}</li>`).join('');
