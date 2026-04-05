@@ -1,9 +1,21 @@
-/*  your css code here. If applicable */
-
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
+  background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80") no-repeat center center fixed;
+  background-size: cover;
 }
 
-li {
-  margin: 6px 0;
+#band {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: square;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+#band li {
+  padding: 30px 40px;
+  font-size: 22px;
+  border-bottom: 1px solid #ddd;
+  margin-left: 40px;
 }

@@ -14,13 +14,12 @@ const bands = [
   'An Old Dog'
 ];
 
-function stripArticle(name) {
-  return name.replace(/^(a|an|the)\s+/i, '');
+function strip(bandName) {
+  return bandName.replace(/^(a |an |the )/i, "").trim();
 }
 
-const sortedBands = [...bands].sort((a, b) =>
-  stripArticle(a).localeCompare(stripArticle(b))
-);
+const sortedBands = bands.sort((a, b) => strip(a).localeCompare(strip(b)));
 
-document.getElementById('band').innerHTML =
-  sortedBands.map(b => `<li>${b}</li>`).join('');
+document.getElementById("band").innerHTML = sortedBands
+  .map(band => `<li>${band}</li>`)
+  .join("");
